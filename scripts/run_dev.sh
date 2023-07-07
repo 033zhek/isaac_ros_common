@@ -177,7 +177,8 @@ fi
 
 # Run container from image
 print_info "Running $CONTAINER_NAME"
-docker run -it --rm \
+docker run -it -e "TERM=xterm-256color" \
+    --rm \
     --privileged \
     --network host \
     ${DOCKER_ARGS[@]} \
