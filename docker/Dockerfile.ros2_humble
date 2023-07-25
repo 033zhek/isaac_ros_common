@@ -9,7 +9,7 @@
 ARG BASE_IMAGE
 
 # ------------------------------------------------------------------------------
-ARG CUDA_VERSION=11.4.1
+ARG CUDA_VERSION=11.4.3
 ARG BASE_DIST=ubuntu20.04
 FROM nvidia/cuda:${CUDA_VERSION}-devel-${BASE_DIST} as ros_builder
 
