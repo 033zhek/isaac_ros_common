@@ -9,7 +9,7 @@
 # license agreement from NVIDIA CORPORATION is strictly prohibited.
 
 # Build ROS dependency
-echo "source /opt/ros/${ROS_DISTRO}/setup.bash" >> ~/.bashrc
+echo "source /workspaces/isaac_ros-dev/install/setup.bash" >> ~/.bashrc
 source /opt/ros/${ROS_DISTRO}/setup.bash
 
 sudo apt-get update
@@ -17,5 +17,7 @@ rosdep update
 
 # Restart udev daemon
 sudo service udev restart
+
+sudo sysctl -w net.core.rmem_max=134217728 net.core.rmem_default=134217728
 
 $@
