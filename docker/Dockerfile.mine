@@ -26,6 +26,8 @@ RUN echo "# R${L4T_MAJOR_VERSION} (release), REVISION: ${L4T_MINOR_VERSION}.${L4
 RUN chmod -R 777 /usr/local/zed && \
     chmod -R 777 /usr/local/lib/python3.8/dist-packages
     
+COPY configs/* /usr/local/zed/settings/
+    
 
 #This symbolic link is needed to use the streaming features on Jetson inside a container
 RUN ln -sf /usr/lib/aarch64-linux-gnu/tegra/libv4l2.so.0 /usr/lib/aarch64-linux-gnu/libv4l2.so
