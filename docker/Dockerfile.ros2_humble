@@ -112,9 +112,10 @@ RUN apt-get update && apt-get install -y ros-humble-ros-base \
     ros-humble-launch-testing \
     ros-humble-launch-testing-ament-cmake \
     ros-humble-nav2-bringup \
+    ros-humble-navigation2 \
     ros-humble-nav2-msgs \
     ros-humble-nav2-mppi-controller \
-    ros-humble-navigation2 \
+    ros-humble-nav2-behaviors \
     ros-humble-ompl \
     ros-humble-resource-retriever \
     ros-humble-rqt-graph \
